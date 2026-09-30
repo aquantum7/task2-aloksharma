@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "Manrope", system-ui, sans-serif;
+  color: #f6f3ee;
+  background: #0b0b0d;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(132, 92, 255, 0.16), transparent 34rem),
+    radial-gradient(circle at 85% 10%, rgba(37, 198, 255, 0.1), transparent 30rem),
+    #0b0b0d;
+}
+
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+.app-shell {
+  width: min(1440px, calc(100% - 40px));
+  margin: auto;
+}
+
+.topbar {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #242429;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #3a3a43;
+  border-radius: 12px;
+  background: #16161a;
+}
+
+.brand strong,
+.brand span {
+  display: block;
+}
+
+.brand strong {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+.brand span,
+.status-pill,
+.section-heading > span,
+.security-note,
+footer {
+  color: #888891;
+}
+
+.brand span {
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.status-pill,
+.eyebrow {
+  font-family: "DM Mono", monospace;
+  letter-spacing: 0.1em;
+  font-size: 10px;
+}
+
+.status-pill {
+  padding: 7px 10px;
+  border: 1px solid #303038;
+  border-radius: 999px;
+}
+
+.hero {
+  padding: 78px 0 54px;
+}
+
+.hero-copy {
+  max-width: 780px;
+}
+
+.eyebrow {
+  color: #a99cff;
+  margin: 0 0 12px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(46px, 7vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+  margin-bottom: 22px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 0;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 17px;
+}
+
+.subtitle {
+  max-width: 650px;
+  color: #a4a4ad;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1.35fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.control-panel,
+.gallery-panel {
+  border: 1px solid #242429;
+  background: rgba(15, 15, 18, 0.82);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.section-heading.compact {
+  margin-top: 30px;
+}
+
+textarea,
+select {
+  width: 100%;
+  color: #f6f3ee;
+  background: #101014;
+  border: 1px solid #303038;
+  border-radius: 13px;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  padding: 16px;
+  line-height: 1.6;
+  min-height: 160px;
+}
+
+textarea:focus,
+select:focus {
+  border-color: #7771ff;
+  box-shadow: 0 0 0 3px rgba(119, 113, 255, 0.12);
+}
+
+.examples {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.example-chip {
+  border: 1px solid #292930;
+  background: #151519;
+  color: #a5a5ae;
+  padding: 7px 9px;
+  border-radius: 999px;
+  font-size: 10px;
+  text-align: left;
+}
+
+.example-chip:hover {
+  color: #fff;
+  border-color: #45454f;
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: #888891;
+  font-size: 11px;
+}
+
+select {
+  padding: 12px 10px;
+}
+
+.error-box {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid #5c3338;
+  border-radius: 12px;
+  color: #ffb8c0;
+  background: rgba(104, 34, 45, 0.18);
+  font-size: 12px;
+}
+
+.generate-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  border: 0;
+  border-radius: 13px;
+  background: #f4f1eb;
+  color: #111116;
+  font-weight: 800;
+}
+
+.generate-btn:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.security-note {
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 12px 0 0;
+  text-align: center;
+}
+
+.empty-state {
+  min-height: 520px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  text-align: center;
+  border: 1px dashed #303038;
+  border-radius: 16px;
+  color: #777780;
+}
+
+.empty-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #34343c;
+  border-radius: 18px;
+  margin-bottom: 16px;
+  color: #aaa2ff;
+}
+
+.empty-state p {
+  max-width: 320px;
+  line-height: 1.6;
+  font-size: 12px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.art-card {
+  overflow: hidden;
+  border: 1px solid #292930;
+  border-radius: 14px;
+  background: #101014;
+}
+
+.art-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.art-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 12px;
+  color: #8e8e97;
+  font-size: 11px;
+}
+
+.art-footer a {
+  color: #d8d4ff;
+  text-decoration: none;
+}
+
+.loading-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.skeleton {
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  background: linear-gradient(100deg, #121216 20%, #1a1a20 40%, #121216 60%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 2px 50px;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+}
+
+@media (max-width: 900px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 54px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-shell {
+    width: min(100% - 24px, 1440px);
+  }
+
+  .topbar {
+    min-height: 70px;
+  }
+
+  .status-pill {
+    display: none;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .controls-grid,
+  .gallery,
+  .loading-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .control-panel,
+  .gallery-panel {
+    padding: 17px;
+    border-radius: 16px;
+  }
+
+  footer {
+    gap: 10px;
+    flex-direction: column;
+  }
+}
